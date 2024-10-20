@@ -1,29 +1,18 @@
 # Unity WebGL Copy and Paste
 
-For some reason Unity decided not to support copy and paste in WebGL.
-Here is an attempt to add it back in. No promises that it's perfect 😅
+This package adds support for copy and paste in Unity WebGL builds.
 
 ![screenshot](https://user-images.githubusercontent.com/234804/85267132-caa04900-b4af-11ea-821f-921cb7f02f34.gif)
 
 At the moment there is only support for [`InputField`](https://docs.unity3d.com/2019.1/Documentation/Manual/script-InputField.html) and
 [`TMPro.TMP_InputField`](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.1/api/TMPro.TMP_InputField.html)
 
-## Instructions
+## Installation
 
-1. Download and add in [this unity package](https://github.com/Trisibo/unity-webgl-copy-and-paste/releases/latest) into your project.
-
-2. If you are using [`TMPro.TMP_InputField`](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.1/api/TMPro.TMP_InputField.html) then edit `Assets/WebGLCopyAndPaste/Scripts/WebGLCopyAndPaste.cs`
-and uncomment this line
-
+Add the following URL to your Unity Package Manager:
 ```
-// #define WEBGL_COPY_AND_PASTE_SUPPORT_TEXTMESH_PRO
+https://github.com/kainoo-ch/unity-webgl-copy-and-paste.git?path=Packages/ch.kainoo.webgl.copypaste
 ```
-
-## Alternatives
-
-This might be better?
-
-https://github.com/kou-yeung/WebGLInput
 
 ## Browsers tested
 
@@ -39,8 +28,7 @@ The plugin has been tested an confirmed working on:
 
 * Non Alphabetic characters
 
-  See [this thread](https://forum.unity.com/threads/japanese-hiragana-characters-dont-work-in-webgl.356097/). 
-  You apparently need to include the fonts in your Unity project.
+  See [this thread](https://forum.unity.com/threads/japanese-hiragana-characters-dont-work-in-webgl.356097/). Your application needs to support these characters.
 
 * Ctrl-A/⌘-A selects other HTML on the page
 
@@ -52,7 +40,13 @@ The plugin has been tested an confirmed working on:
      use [`user-select: none;`](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select) in your CSS
      to make whatever parts of the page you want to prevent from being selected.
 
-## ChangeList
+## Changelog
+
+* 0.3.1
+
+  * Reshaped the plugin as a package for easy installation in Unity.
+
+  * Added autodiscovery of TextMeshPro in the project
 
 * 0.3.0
 
@@ -92,3 +86,6 @@ The plugin has been tested an confirmed working on:
   * Initial Release
 
 ## License: BSD-3-Clause
+This project is based on the works of [Trisibo](https://github.com/Trisibo/unity-webgl-copy-and-paste) and [greggman](https://github.com/greggman/unity-webgl-copy-and-paste).
+
+All modifications from the original work are licensed under the MIT license.
