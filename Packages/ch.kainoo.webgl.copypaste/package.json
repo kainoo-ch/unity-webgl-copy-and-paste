@@ -1,0 +1,12 @@
+{
+    "name": "ch.kainoo.webgl.copypaste",
+    "displayName": "WebGL Copy & Paste",
+    "author": { "name": "Kaïnoo Sàrl", "url": "https://kainoo.ch" },
+    "version": "0.3.0",
+    "unity": "2022.3",
+    "description": "Support Copy and Paste in Unity WebGL",
+    "keywords": [ "WebGL", "copy", "paste", "polyfill" ],
+    "license": "BSD-3",
+    "category": "polyfill",
+    "dependencies": {}
+}
